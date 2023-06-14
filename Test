@@ -1,1 +1,23 @@
+#!/bin/bash
+
+if [ ! -d /tmp/testDir ]; then
+mkdir /tmp/testDir
+fi
+
+cd /tmp/testDir
+touch test.sh
+ifconfig > ifconfig.log
+
+
+
+#!/bin/bash
+
+if [ ! -d /tmp/testDir ]; then
+mkdir /tmp/testDir
+fi
+
+cd /tmp/testDir
+touch test.sh
+ifconfig > ifconfig.log
+
 
